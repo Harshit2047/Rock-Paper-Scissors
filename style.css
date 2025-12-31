@@ -1,0 +1,18 @@
+body{
+    background-color: black;
+    height: 100vh;
+    
+}
+
+.container{
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+
+.container button{
+    height: 50px;
+    width: 100px;
+}
