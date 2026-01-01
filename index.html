@@ -7,12 +7,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <button onclick="buttonClicked('Rock')">Rock</button>
-        <button onclick="buttonClicked('Paper')">Paper</button>
-        <button onclick="buttonClicked('Scissor')">Scissor</button>
-        <button onclick="resetScore()">Reset</button>
+    <div class="big-conatiner">
+        <div class="container" >
+            <button class=" btn"  onclick="buttonClicked('Rock')">
+            <img class=" imageClass" src="/img/rock.png">
+        </button>
+        <button class=" btn" onclick="buttonClicked('Paper')">
+            <img class=" imageClass" src="/img/paper.png">
+        </button>
+        <button class=" btn"   onclick="buttonClicked('Scissor')">
+            <img class=" imageClass" src="/img/scissor.jpg">
+        </button>
+        <button class=" btn"  onclick="resetScore()">Reset</button>
+        </div>
+        
+        <p class="result"></p>
+        <p class="score"></p>
+        <!-- <input onkeydown="typing(event)" class="input">
+        <p class="inputMessage"></p> -->
     </div>
+    
 </body>
 <script src="index.js" defer></script>
 </html>

@@ -44,6 +44,8 @@ function calculateResult(userChoice,computerChoice){
     return `You selected ${userChoice} and computer selected ${computerChoice} , ${result}`
 }
 function buttonClicked(Choice){
+    const resultElement=document.querySelector('.result');
+    const scoreElement=document.querySelector('.score');
     userChoice=Choice;
     let computerChoice=ComputerChoice();
 
@@ -53,10 +55,21 @@ function buttonClicked(Choice){
         'Lose':0,
         'Tie':0
     };
-    alert(`${result} Win :- ${score.win} Lose: - ${score.Lose} Tie:- ${score.Tie}`);
+    scoreElement.innerHTML=`Score : Win ${score.win} , Lose ${score.Lose} , Tie ${score.Tie} `
+    resultElement.innerHTML=result;
   
 }
 
 function resetScore(){
-   localStorage.removeItem('score');
+    const resultElement=document.querySelector('.result');
+    const scoreElement=document.querySelector('.score');
+    localStorage.removeItem('score');
+    resultElement.innerHTML='';
+    scoreElement.innerHTML=`Score : Win 0 , Lose 0 , Tie 0 `
 }
+
+// function typing(event){
+//     const typed=document.querySelector('.inputMessage');
+//     if(event.key==='Enter') typed.innerHTML='';
+//     typed.innerHTML+=event.key;
+// }
